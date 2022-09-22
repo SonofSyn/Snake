@@ -6,6 +6,7 @@ export default function createSnake(context: CanvasRenderingContext2D, startPos:
     context.fillStyle = "#0fd24f";
     render(context, currentPos[0], "snake");
     const move = (newPos: Coordinate, length: number) => {
+
         let errorFlag = false
         currentPos.forEach(e => {
             if (e.xPos === newPos.xPos && e.yPos === newPos.yPos) errorFlag = true
@@ -19,5 +20,5 @@ export default function createSnake(context: CanvasRenderingContext2D, startPos:
         render(context, newPos, "snake");
         return false
     };
-    return { move };
+    return { move, getPos: () => currentPos };
 }
