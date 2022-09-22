@@ -2,7 +2,6 @@ import { Coordinate } from "./interface";
 
 export function render(context: CanvasRenderingContext2D, pos: Coordinate, type: "snake" | "food") {
     context.fillStyle = type == "snake" ? "#0fd24f" : "#ec0f36";
-    console.log(pos)
     context.fillRect(pos.xPos, pos.yPos, 10, 5);
 }
 
