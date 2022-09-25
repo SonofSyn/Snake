@@ -5,8 +5,8 @@ export function randomPos(blockedPos: Coordinate[]): Coordinate {
     let yPos = 0
     let flag = true
     while (flag) {
-        xPos = Math.floor(Math.random() * 290);
-        yPos = Math.floor(Math.random() * 145);
+        xPos = Math.floor(Math.random() * 320);
+        yPos = Math.floor(Math.random() * 320);
         flag = false
         blockedPos.forEach(pos => {
             if (pos.xPos === xPos && pos.yPos === yPos) flag = true

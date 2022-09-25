@@ -1,5 +1,5 @@
 import { Coordinate } from "./interface.js";
-import { render, unrender } from "./render.js";
+import { render, renderBoard, unrender } from "./render.js";
 
 export default function createSnake(context: CanvasRenderingContext2D, startPos: Coordinate) {
     let currentPos: Coordinate[] = [Object.assign({}, startPos)];
